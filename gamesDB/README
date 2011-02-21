@@ -1,5 +1,232 @@
 gamesDB 0.1
 
 
+Prerequisites:
+1.JPype - http://jpype.sourceforge.net/
+2.Neo4jpy - http://components.neo4j.org/neo4j.py/
 
+Usage:
+For the first use:
+python main.py -download -store -query
+
+For regular query mode:
+python main.py -query
+
+
+
+Real example:
+matthew@Photon:gamesDB$ python main.py -download -store -query
+/Library/Python/2.6/site-packages/jpype/_pykeywords.py:18: DeprecationWarning: the sets module is deprecated
+  import sets
+Downloading data...
+Listing contets of http://download.freebase.com/datadumps/latest/browse/games/
+Downloading contets of http://download.freebase.com/datadumps/latest/browse/games/game.tsv
+Saved to ./dataFiles/game.tsv
+Downloading contets of http://download.freebase.com/datadumps/latest/browse/games/game_designer.tsv
+Saved to ./dataFiles/game_designer.tsv
+Downloading contets of http://download.freebase.com/datadumps/latest/browse/games/playing_card_game_play_direction.tsv
+Saved to ./dataFiles/playing_card_game_play_direction.tsv
+Downloading contets of http://download.freebase.com/datadumps/latest/browse/games/game_genre.tsv
+Saved to ./dataFiles/game_genre.tsv
+Downloading contets of http://download.freebase.com/datadumps/latest/browse/games/game_expansion.tsv
+Saved to ./dataFiles/game_expansion.tsv
+Downloading contets of http://download.freebase.com/datadumps/latest/browse/games/playing_card_deck_type.tsv
+Saved to ./dataFiles/playing_card_deck_type.tsv
+Downloading contets of http://download.freebase.com/datadumps/latest/browse/games/playing_card_game.tsv
+Saved to ./dataFiles/playing_card_game.tsv
+Downloading contets of http://download.freebase.com/datadumps/latest/browse/games/game_publisher.tsv
+Saved to ./dataFiles/game_publisher.tsv
+Data downloaded.
+Storing data...
+Listing data files from ./dataFiles/
+Reading data file ./dataFiles/game.tsv
+Creating indexes for game
+Total 2273 items
+Reading data file ./dataFiles/game_designer.tsv
+Creating indexes for game_designer
+Total 457 items
+Reading data file ./dataFiles/game_expansion.tsv
+Creating indexes for game_expansion
+Total 625 items
+Reading data file ./dataFiles/game_genre.tsv
+Creating indexes for game_genre
+Total 96 items
+Reading data file ./dataFiles/game_publisher.tsv
+Creating indexes for game_publisher
+Total 213 items
+Reading data file ./dataFiles/playing_card_deck_type.tsv
+Creating indexes for playing_card_deck_type
+Total 4 items
+Reading data file ./dataFiles/playing_card_game.tsv
+Creating indexes for playing_card_game
+Total 476 items
+Reading data file ./dataFiles/playing_card_game_play_direction.tsv
+Creating indexes for playing_card_game_play_direction
+Total 2 items
+Updating relations...
+500 items processed
+1000 items processed
+1500 items processed
+2000 items processed
+2500 items processed
+3000 items processed
+3500 items processed
+4000 items processed
+4155 items processed
+Total relations created 8749
+Data store completed.
+
+
+0) game
+1) game_designer
+2) game_expansion
+3) game_genre
+4) game_publisher
+5) playing_card_deck_type
+6) playing_card_game
+7) playing_card_game_play_direction
+Please choose one of the above indexes (enter 0-7): 0
+Index 'game' was chosen.
+
+
+Please enter your query (or type 'quit;' to quit):settlers
+{   u'dataFile': u'game',
+    u'derivative_games': u'Catan Card Game,The Settlers of Canaan',
+    u'derived_from': u'',
+    u'designer': u'Klaus Teuber',
+    u'expansions': u'Cities and Knights of Catan',
+    u'game_subjects': u'',
+    u'genre': u'German-style',
+    u'id': u'/m/095hd',
+    u'introduced': u'1995',
+    u'maximum_playing_time_minutes': u'80.0',
+    u'minimum_age_years': u'10.0',
+    u'name': u'Settlers of Catan',
+    u'number_of_players': u'/m/02kf18r',
+    u'origin': u'Germany',
+    u'playing_time_minutes': u'20.0',
+    u'publisher': u'Kosmos,Capcom,Mayfair Games,999 Games',
+    'related': [   {   'dataFile': u'game_publisher',
+                       'id': u'/m/05b64m',
+                       'name': u'Kosmos'},
+                   {   'dataFile': u'game_publisher',
+                       'id': u'/m/01nds',
+                       'name': u'Capcom'},
+                   {   'dataFile': u'game_publisher',
+                       'id': u'/m/05550q',
+                       'name': u'Mayfair Games'},
+                   {   'dataFile': u'game_publisher',
+                       'id': u'/m/081ljc',
+                       'name': u'999 Games'},
+                   {   'dataFile': u'game_designer',
+                       'id': u'/m/01ktq7',
+                       'name': u'Klaus Teuber'},
+                   {   'dataFile': u'game',
+                       'id': u'/m/026_98b',
+                       'name': u'Catan Card Game'},
+                   {   'dataFile': u'game',
+                       'id': u'/m/0f1cbt',
+                       'name': u'The Settlers of Canaan'},
+                   {   'dataFile': u'game_expansion',
+                       'id': u'/m/02hq3',
+                       'name': u'Cities and Knights of Catan'},
+                   {   'dataFile': u'game_genre',
+                       'id': u'/m/039q9',
+                       'name': u'German-style'},
+                   {   'dataFile': u'game',
+                       'id': u'/m/02hq3',
+                       'name': u'Cities and Knights of Catan'}]}
+{   u'dataFile': u'game',
+    u'derivative_games': u'',
+    u'derived_from': u'Settlers of Catan',
+    u'designer': u'Klaus Teuber',
+    u'expansions': u'',
+    u'game_subjects': u'',
+    u'genre': u'',
+    u'id': u'/m/026_98b',
+    u'introduced': u'',
+    u'maximum_playing_time_minutes': u'',
+    u'minimum_age_years': u'',
+    u'name': u'Catan Card Game',
+    u'number_of_players': u'',
+    u'origin': u'',
+    u'playing_time_minutes': u'',
+    u'publisher': u'Mayfair Games',
+    'related': [   {   'dataFile': u'game',
+                       'id': u'/m/095hd',
+                       'name': u'Settlers of Catan'},
+                   {   'dataFile': u'game',
+                       'id': u'/m/043lgjm',
+                       'name': u'Game'},
+                   {   'dataFile': u'game',
+                       'id': u'/m/05c75x9',
+                       'name': u'Trumps, Tricks, Game!'},
+                   {   'dataFile': u'game_publisher',
+                       'id': u'/m/05550q',
+                       'name': u'Mayfair Games'},
+                   {   'dataFile': u'game_designer',
+                       'id': u'/m/01ktq7',
+                       'name': u'Klaus Teuber'},
+                   {   'dataFile': u'game_genre',
+                       'id': u'/m/039q9',
+                       'name': u'German-style'},
+                   {   'dataFile': u'game_publisher',
+                       'id': u'/m/01nds',
+                       'name': u'Capcom'},
+                   {   'dataFile': u'game_publisher',
+                       'id': u'/m/081ljc',
+                       'name': u'999 Games'},
+                   {   'dataFile': u'game_publisher',
+                       'id': u'/m/05b64m',
+                       'name': u'Kosmos'}]}
+{   u'dataFile': u'game',
+    u'derivative_games': u'',
+    u'derived_from': u'Settlers of Catan',
+    u'designer': u'',
+    u'expansions': u'',
+    u'game_subjects': u'',
+    u'genre': u'',
+    u'id': u'/m/0f1cbt',
+    u'introduced': u'',
+    u'maximum_playing_time_minutes': u'',
+    u'minimum_age_years': u'7.0',
+    u'name': u'The Settlers of Canaan',
+    u'number_of_players': u'/m/02kf197',
+    u'origin': u'',
+    u'playing_time_minutes': u'',
+    u'publisher': u'Cactus Game Design',
+    'related': [   {   'dataFile': u'game',
+                       'id': u'/m/095hd',
+                       'name': u'Settlers of Catan'},
+                   {   'dataFile': u'game',
+                       'id': u'/m/043lgjm',
+                       'name': u'Game'},
+                   {   'dataFile': u'game_publisher',
+                       'id': u'/m/02kd_zy',
+                       'name': u'Cactus Game Design'},
+                   {   'dataFile': u'game',
+                       'id': u'/m/05c75x9',
+                       'name': u'Trumps, Tricks, Game!'},
+                   {   'dataFile': u'game_designer',
+                       'id': u'/m/01ktq7',
+                       'name': u'Klaus Teuber'},
+                   {   'dataFile': u'game_genre',
+                       'id': u'/m/039q9',
+                       'name': u'German-style'},
+                   {   'dataFile': u'game_publisher',
+                       'id': u'/m/01nds',
+                       'name': u'Capcom'},
+                   {   'dataFile': u'game_publisher',
+                       'id': u'/m/081ljc',
+                       'name': u'999 Games'},
+                   {   'dataFile': u'game_publisher',
+                       'id': u'/m/05550q',
+                       'name': u'Mayfair Games'},
+                   {   'dataFile': u'game_publisher',
+                       'id': u'/m/05b64m',
+                       'name': u'Kosmos'}]}
+Found 3 results matching your criteria.
+
+Please enter your query (or type 'quit;' to quit):quit;
+Bye.
 
