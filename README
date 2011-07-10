@@ -1,6 +1,3 @@
-gamesDB 0.1
-
-
 Prerequisites:
 1.JPype - http://jpype.sourceforge.net/
 2.Neo4jpy - http://components.neo4j.org/neo4j.py/
