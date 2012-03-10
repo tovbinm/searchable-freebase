@@ -12,26 +12,24 @@ python main.py -query
 
 
 Real example:
-matthew@Photon:gamesDB$ python main.py -download -store -query
-/Library/Python/2.6/site-packages/jpype/_pykeywords.py:18: DeprecationWarning: the sets module is deprecated
-  import sets
+matthew@photon:$~ python main.py -download -store -query
 Downloading data...
-Listing contets of http://download.freebase.com/datadumps/latest/browse/games/
-Downloading contets of http://download.freebase.com/datadumps/latest/browse/games/game.tsv
+Listing contents of http://download.freebase.com/datadumps/latest/browse/games/
+Downloading contents of http://download.freebase.com/datadumps/latest/browse/games/game.tsv
 Saved to ./dataFiles/game.tsv
-Downloading contets of http://download.freebase.com/datadumps/latest/browse/games/game_designer.tsv
+Downloading contents of http://download.freebase.com/datadumps/latest/browse/games/game_designer.tsv
 Saved to ./dataFiles/game_designer.tsv
-Downloading contets of http://download.freebase.com/datadumps/latest/browse/games/playing_card_game_play_direction.tsv
+Downloading contents of http://download.freebase.com/datadumps/latest/browse/games/playing_card_game_play_direction.tsv
 Saved to ./dataFiles/playing_card_game_play_direction.tsv
-Downloading contets of http://download.freebase.com/datadumps/latest/browse/games/game_genre.tsv
+Downloading contents of http://download.freebase.com/datadumps/latest/browse/games/game_genre.tsv
 Saved to ./dataFiles/game_genre.tsv
-Downloading contets of http://download.freebase.com/datadumps/latest/browse/games/game_expansion.tsv
+Downloading contents of http://download.freebase.com/datadumps/latest/browse/games/game_expansion.tsv
 Saved to ./dataFiles/game_expansion.tsv
-Downloading contets of http://download.freebase.com/datadumps/latest/browse/games/playing_card_deck_type.tsv
+Downloading contents of http://download.freebase.com/datadumps/latest/browse/games/playing_card_deck_type.tsv
 Saved to ./dataFiles/playing_card_deck_type.tsv
-Downloading contets of http://download.freebase.com/datadumps/latest/browse/games/playing_card_game.tsv
+Downloading contents of http://download.freebase.com/datadumps/latest/browse/games/playing_card_game.tsv
 Saved to ./dataFiles/playing_card_game.tsv
-Downloading contets of http://download.freebase.com/datadumps/latest/browse/games/game_publisher.tsv
+Downloading contents of http://download.freebase.com/datadumps/latest/browse/games/game_publisher.tsv
 Saved to ./dataFiles/game_publisher.tsv
 Data downloaded.
 Storing data...

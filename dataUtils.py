@@ -12,11 +12,11 @@ class _dataUtils:
         print 'Downloading data...'
         
         wu = webUtils._webUtils()
-        print 'Listing contets of ' + db_dir_url
+        print 'Listing contents of ' + db_dir_url
         
         items = wu.getDirItems(db_dir_url)
         for item in items:
-            print 'Downloading contets of ' + db_dir_url + item
+            print 'Downloading contents of ' + db_dir_url + item
             itemData = wu.getContent(db_dir_url + item)
             f = open(data_dir + item, 'w')
             f.write(itemData)
